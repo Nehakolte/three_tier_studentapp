@@ -1,5 +1,5 @@
 frontendimg:  
-    build:  .
+    build:  /root/three_tier_studentapp/frontend/
     container_name: frontend
     ports: 
       - "80:80"
