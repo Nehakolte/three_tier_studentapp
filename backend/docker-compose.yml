@@ -1,0 +1,19 @@
+version:  "3.8"
+services: 
+  backendimg:
+    build: /root/three_tier_studentapp/backend/
+    container_name : backend
+    ports: 
+      - "8080:8080"
+    network_mode:
+        bridge
+  frontendimg:  
+    build:  /root/three_tier_studentapp/backend/
+    container_name: frontend
+    ports: 
+      - "80:80"
+    depends_on: 
+      - backendimg
+    network_mode:
+        bridge
+    
